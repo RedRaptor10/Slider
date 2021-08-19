@@ -1,0 +1,72 @@
+:root {
+    --backgroundColor: rgb(32,32,32);
+}
+
+body {
+    background: var(--backgroundColor);
+}
+
+#container {
+    width: 100%;
+    height: 100vh;
+}
+
+.slider {
+    position: relative;
+    width: 75%;
+    height: 25%;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    left: 100%;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.5s ease; /* Chrome / Safari */
+    -moz-transition: all 0.5s ease; /* Mozilla Firefox */
+    -o-transition: all 0.5s ease; /* Opera */
+    -ms-transition: all 0.5s ease; /* Microsoft Edge */
+    transition: all 0.5s ease;
+}
+.slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+}
+.slider div:first-child {
+    left: 0;
+}
+
+.slider-prev-btn, .slider-next-btn {
+    position: absolute;
+    background: rgba(0,0,0,.5);
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 12px;
+    border-radius: 0 4px 4px 0;
+    user-select: none;
+    cursor: pointer;
+    -webkit-transition: all 0.5s ease; /* Chrome / Safari */
+    -moz-transition: all 0.5s ease; /* Mozilla Firefox */
+    -o-transition: all 0.5s ease; /* Opera */
+    -ms-transition: all 0.5s ease; /* Microsoft Edge */
+    transition: all 0.5s ease;
+}
+.slider-prev-btn {
+    display: none;
+}
+.slider-next-btn {
+    display: block;
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+.slider-prev-btn:hover, .slider-next-btn:hover {
+    background: rgba(0,0,0,.75);
+}
